@@ -1,0 +1,30 @@
+function toTitleCase(str) {
+  return str
+    .toLowerCase()
+    .split(" ")
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ");
+}
+
+function countVowels(str) {
+  let vowels = "aeiouAEIOU";
+  let count = 0;
+
+  for (let char of str) {
+    if (vowels.includes(char)) {
+      count++;
+    }
+  }
+
+  return count;
+}
+
+function reverseString(str) {
+  return str.split("").reverse().join("");
+}
+
+let text = "backend developer";
+
+console.log("Title Case:", toTitleCase(text));
+console.log("Vowel Count:", countVowels(text));
+console.log("Reversed:", reverseString(text));

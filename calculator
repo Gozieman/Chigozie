@@ -1,0 +1,35 @@
+let score = 88;
+
+function calculateGrade(score) {
+    if (score >= 90) {
+        return "A";
+    } else if (score >= 80) {
+        return "B";
+    } else if (score >= 70) {
+        return "C";
+    } else if (score >= 60) {
+        return "D";
+    } else {
+        return "F";
+    }
+}
+
+function calculateGradeSwitch(score) {
+    const gradeLevel = Math.floor(score / 10);
+    switch (gradeLevel) {
+        case 10:
+        case 9:
+            return "A";
+        case 8:
+            return "B";
+        case 7:
+            return "C";
+        case 6:
+            return "D";
+        default:
+            return "F";
+    }
+}
+
+console.log("Using if/else:", calculateGrade(score));
+console.log("Using switch:", calculateGradeSwitch(score));
