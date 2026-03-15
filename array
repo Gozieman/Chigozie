@@ -1,0 +1,27 @@
+const students = [
+  { name: "Alice", score: 85, age: 20 },
+  { name: "Bob", score: 58, age: 19 },
+  { name: "Charlie", score: 92, age: 21 },
+  { name: "David", score: 74, age: 20 },
+  { name: "Eva", score: 66, age: 22 }
+];
+
+const passedStudents = students.filter(student => student.score >= 60);
+console.log("Passed Students:", passedStudents);
+
+const studentNames = students.map(student => student.name);
+console.log("Student Names:", studentNames);
+
+const averageScore =
+  students.reduce((sum, student) => sum + student.score, 0) / students.length;
+console.log("Average Score:", averageScore);
+
+const sortedStudents = [...students].sort((a, b) => b.score - a.score);
+console.log("Sorted by Score:", sortedStudents);
+
+const hasFailedStudent = students.some(student => student.score < 60);
+console.log("Any student failed?", hasFailedStudent);
+
+const allPassed = students.every(student => student.score >= 60);
+console.log("Did all students pass?", allPassed);
+
