@@ -1,0 +1,153 @@
+qa-api-testing-project
+│
+├── README.md
+├── test-cases.md
+├── bug-reports.md
+└── api-tests.md
+# QA API Testing Project
+
+This project demonstrates basic Software Testing practices including:
+
+- Writing test cases
+- API testing
+- Bug reporting
+- Test documentation
+
+The API tested in this project is a public REST API used for learning purposes.
+
+API used:
+https://jsonplaceholder.typicode.com
+
+Tools used:
+- Postman
+- Git
+- GitHub
+- VS Code
+
+Test Coverage:
+- GET /posts
+- GET /users
+- GET /comments
+
+Purpose:
+This project was created to demonstrate practical QA skills for a Software Testing internship.
+# Test Cases
+
+## Test Case 1
+
+Test Case ID: TC001  
+Feature: Fetch all posts  
+
+Steps:
+1. Send GET request to /posts
+2. Check response status
+
+Expected Result:
+Status code should be 200  
+Response should return a list of posts
+
+---
+
+## Test Case 2
+
+Test Case ID: TC002  
+Feature: Fetch users
+
+Steps:
+1. Send GET request to /users
+2. Validate response format
+
+Expected Result:
+Response should return JSON with user information
+
+---
+
+## Test Case 3
+
+Test Case ID: TC003  
+Feature: Fetch comments
+
+Steps:
+1. Send GET request to /comments
+2. Validate response data
+
+Expected Result:
+System should return list of comments
+# API Testing
+
+API Base URL:
+https://jsonplaceholder.typicode.com
+
+## Endpoint 1
+
+GET /posts
+
+Request:
+https://jsonplaceholder.typicode.com/posts
+
+Expected Result:
+- Status Code: 200
+- JSON response returned
+- Contains post data
+
+---
+
+## Endpoint 2
+
+GET /users
+
+Request:
+https://jsonplaceholder.typicode.com/users
+
+Expected Result:
+- Status Code: 200
+- User data returned
+- Each user should have ID and name
+
+---
+
+## Endpoint 3
+
+GET /comments
+
+Request:
+https://jsonplaceholder.typicode.com/comments
+
+Expected Result:
+- Status Code: 200
+- Comment data returned
+# Bug Reports
+
+## Bug Report 1
+
+Title: API response delay
+
+Description:
+The API endpoint sometimes responds slowly.
+
+Steps to reproduce:
+1. Send GET request to /posts
+2. Observe response time
+
+Expected Result:
+Response should be fast (<1 second)
+
+Actual Result:
+Response sometimes exceeds expected time
+
+---
+
+## Bug Report 2
+
+Title: Missing validation on user fields
+
+Description:
+Some responses may not validate required fields.
+
+Expected:
+Each user should contain:
+- id
+- name
+- email
+Actual:
+Validation not enforced
